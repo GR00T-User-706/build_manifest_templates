@@ -1,0 +1,37 @@
+# Maintainer: {{MAINTAINER_NAME}} <{{MAINTAINER_EMAIL}}>
+pkgname={{PACKAGE_NAME}}
+pkgver={{VERSION}}
+pkgrel={{RELEASE}}
+pkgdesc='{{DESCRIPTION}}'
+arch=('{{ARCH}}')
+url='{{HOMEPAGE_URL}}'
+license=('{{SPDX_LICENSE}}')
+depends=({{RUNTIME_DEPENDENCIES}})
+makedepends=({{BUILD_DEPENDENCIES}})
+optdepends=({{OPTIONAL_DEPENDENCIES}})
+conflicts=({{CONFLICTS}})
+provides=({{PROVIDES}})
+source=('{{SOURCE_URL}}')
+sha256sums=('{{SOURCE_SHA256}}')
+
+prepare() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    # TODO: Apply required source patches.
+}
+
+build() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    {{BUILD_COMMAND}}
+}
+
+check() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    # TODO: Add tests, or remove this function if unsupported.
+    {{TEST_COMMAND}}
+}
+
+package() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    # Install into makepkg's fakeroot staging directory, never directly to host.
+    {{INSTALL_COMMAND}}
+}
