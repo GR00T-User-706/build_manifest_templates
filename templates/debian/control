@@ -1,0 +1,14 @@
+Source: {{SOURCE_PACKAGE_NAME}}
+Section: {{DEBIAN_SECTION}}
+Priority: {{DEBIAN_PRIORITY}}
+Maintainer: {{MAINTAINER_NAME}} <{{MAINTAINER_EMAIL}}>
+Build-Depends: debhelper-compat (= {{DEBHELPER_COMPAT}}), {{BUILD_DEPENDENCIES}}
+Standards-Version: {{DEBIAN_POLICY_VERSION}}
+Rules-Requires-Root: {{RULES_REQUIRES_ROOT}}
+Homepage: {{HOMEPAGE_URL}}
+
+Package: {{BINARY_PACKAGE_NAME}}
+Architecture: {{DEBIAN_ARCH}}
+Depends: ${shlibs:Depends}, ${misc:Depends}, {{RUNTIME_DEPENDENCIES}}
+Description: {{SHORT_DESCRIPTION}}
+ {{LONG_DESCRIPTION}}
