@@ -1,0 +1,16 @@
+# Input template for termux-create-package.
+# PROVISIONAL illustrative skeleton: verify accepted keys/types against the
+# installed tool's help/docs. This is NOT the PKGforge manifest.
+name: "{{PACKAGE_NAME}}"
+version: "{{VERSION}}"
+arch: "{{TERMUX_ARCH}}"
+description: "{{DESCRIPTION}}"
+maintainer: "{{MAINTAINER_NAME}} <{{MAINTAINER_EMAIL}}>"
+homepage: "{{HOMEPAGE_URL}}"
+license: "{{SPDX_LICENSE}}"
+
+# TODO: Replace illustrative fields with the exact schema required by the
+# installed termux-create-package release.
+files:
+  - source: "{{STAGED_FILE_PATH}}"
+    destination: "{{PREFIX_RELATIVE_DESTINATION}}"
