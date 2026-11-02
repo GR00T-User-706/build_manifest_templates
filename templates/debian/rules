@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+# Debian package build rules. Replace TODOs with the actual upstream build flow.
+
+%:
+	dh $@
+
+# Example override. Uncomment and adapt only when required.
+# override_dh_auto_build:
+# 	dh_auto_build -- {{BUILD_ARGUMENTS}}
+
+# override_dh_auto_install:
+# 	dh_auto_install --destdir=debian/{{BINARY_PACKAGE_NAME}}
