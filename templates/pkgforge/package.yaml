@@ -1,0 +1,93 @@
+# PKGforge project-level manifest starter.
+# Proposed structure only. Confirm keys against the PKGforge schema/version.
+schema_version: "{{PKGFORGE_SCHEMA_VERSION}}"
+
+package:
+  name: "{{PACKAGE_NAME}}"
+  version: "{{VERSION}}"
+  release: "{{RELEASE}}"
+  description: "{{DESCRIPTION}}"
+  license: "{{SPDX_LICENSE}}"
+  homepage: "{{HOMEPAGE_URL}}"
+  maintainer:
+    name: "{{MAINTAINER_NAME}}"
+    email: "{{MAINTAINER_EMAIL}}"
+
+source:
+  type: "{{SOURCE_TYPE}}" # archive, git, local
+  url: "{{SOURCE_URL}}"
+  revision: "{{SOURCE_REVISION}}"
+  sha256: "{{SOURCE_SHA256}}"
+
+build:
+  system: "{{BUILD_SYSTEM}}"
+  directory: "{{BUILD_DIRECTORY}}"
+  dependencies: []
+  commands:
+    - "{{BUILD_COMMAND}}"
+  environment: {}
+
+install:
+  prefix: "/usr"
+  staging_directory: "{{STAGING_DIRECTORY}}"
+  files: []
+  directories: []
+  permissions: []
+  exclusions:
+    - "**/__pycache__/**"
+    - "**/*.pyc"
+
+dependencies:
+  runtime: []
+  build: []
+  optional: []
+  conflicts: []
+  provides: []
+  replaces: []
+
+lifecycle:
+  scripts:
+    pre_install: null
+    post_install: null
+    pre_upgrade: null
+    post_upgrade: null
+    pre_remove: null
+    post_remove: null
+  generated_files:
+    policy: "{{GENERATED_FILE_POLICY}}" # preserve, remove, regenerate, package
+    paths: []
+
+targets:
+  arch:
+    enabled: true
+    output_directory: null # Respect makepkg configuration, including PKGDEST.
+    options: {}
+  debian:
+    enabled: true
+    architecture: "{{DEBIAN_ARCH}}"
+    options: {}
+  rpm:
+    enabled: false
+    architecture: "{{RPM_ARCH}}"
+    options: {}
+  alpine:
+    enabled: false
+    architecture: "{{ALPINE_ARCH}}"
+    options: {}
+  termux:
+    enabled: false
+    options: {}
+  appimage:
+    enabled: false
+    options: {}
+  flatpak:
+    enabled: false
+    options: {}
+  snap:
+    enabled: false
+    options: {}
+
+artifacts:
+  patterns: []
+  checksums:
+    algorithm: sha256
