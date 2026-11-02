@@ -1,0 +1,9 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: {{UPSTREAM_NAME}}
+Upstream-Contact: {{UPSTREAM_CONTACT}}
+Source: {{SOURCE_URL}}
+
+Files: *
+Copyright: {{COPYRIGHT_HOLDER}} {{COPYRIGHT_YEARS}}
+License: {{SPDX_LICENSE}}
+ {{LICENSE_TEXT_OR_REFERENCE}}
