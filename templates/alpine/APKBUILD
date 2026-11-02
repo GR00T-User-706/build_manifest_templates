@@ -1,0 +1,24 @@
+# Maintainer: {{MAINTAINER_NAME}} <{{MAINTAINER_EMAIL}}>
+pkgname={{PACKAGE_NAME}}
+pkgver={{VERSION}}
+pkgrel={{RELEASE}}
+pkgdesc="{{DESCRIPTION}}"
+url="{{HOMEPAGE_URL}}"
+arch="{{ARCH}}"
+license="{{SPDX_LICENSE}}"
+depends="{{RUNTIME_DEPENDENCIES}}"
+makedepends="{{BUILD_DEPENDENCIES}}"
+source="{{SOURCE_URL}}"
+sha256sums="{{SOURCE_SHA256}}"
+
+build() {
+    {{BUILD_COMMAND}}
+}
+
+check() {
+    {{TEST_COMMAND}}
+}
+
+package() {
+    {{INSTALL_COMMAND}}
+}
