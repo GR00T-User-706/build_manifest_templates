@@ -29,3 +29,7 @@ See [format notes](docs/formats.md) and [placeholder conventions](docs/placehold
 Use native tools after replacing placeholders: Arch `makepkg --printsrcinfo`; Debian `dpkg-parsechangelog` and `dpkg-buildpackage`; RPM `rpmspec -P`; Alpine `abuild -n`; Flatpak `flatpak-builder --show-manifest`; Snap `snapcraft validate`. Incomplete placeholder files are not expected to validate unchanged.
 
 This repository stores templates and documentation. It does not implement PKGforge or replace ecosystem packaging documentation.
+
+## Project standards
+
+See [PROJECT_STANDARDS.md](docs/PROJECT_STANDARDS.md) for project-specific documentation, contribution, and validation standards.
